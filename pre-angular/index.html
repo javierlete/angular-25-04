@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo</title>
+
+    <link rel="stylesheet" href="css/index.css">
+    <script defer src="js/index.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Ejemplos de HTML, CSS y JavaScript</h1>
+    </header>
+    <!-- nav>ul>li*3>a[href=#]>{Opción $} -->
+    <nav>
+        <ul>
+            <li><a href="#">Opción 1</a></li>
+            <li><a href="#">Opción 2</a></li>
+            <li><a href="#">Opción 3</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <article id="html">
+            <h2>HTML</h2>
+            
+            <section id="parrafos">
+                <h3>Párrafos</h3>
+
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Veritatis suscipit, aspernatur magni maxime perspiciatis est nisi nobis ipsa provident inventore
+                    temporibus laudantium aliquam iure eaque? Eius harum doloribus error quibusdam doloremque, voluptate
+                    exercitationem illum vero odio tempore magni.</p>
+                <p>Similique officiis quia iure dolores harum hic maiores aliquam nulla vitae, atque exercitationem
+                    pariatur, ab ipsam excepturi consequuntur? Excepturi commodi blanditiis suscipit recusandae veniam?
+                    Eligendi veniam delectus architecto id vitae.</p>
+            </section>
+
+            <section id="tabla">
+                <h3>Tabla</h3>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- tr*5>(th>{$})+(td>{Nombre $})+(td>{$$}) -->
+                        <tr>
+                            <th>1</th>
+                            <td>Televisor LED</td>
+                            <td>450,12 €</td>
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                            <td>Cámara fotográfica</td>
+                            <td>250,45 €</td>
+                        </tr>
+                        <tr>
+                            <th>3</th>
+                            <td>Audifonos Bluethooth</td>
+                            <td>150,12 €</td>
+                        </tr>
+                        <tr>
+                            <th>4</th>
+                            <td>Lámpara de pie</td>
+                            <td>20,34 €</td>
+                        </tr>
+                        <tr>
+                            <th>5</th>
+                            <td>Portátil de 13 pulgadas</td>
+                            <td>800,25 €</td>
+                        </tr>
+                        <tr>
+                            <th>6</th>
+                            <td>Bicicleta de montaña</td>
+                            <td>1.500,25 €</td>
+                        </tr>
+                        <tr>
+                            <th>7</th>
+                            <td>Television de plasma</td>
+                            <td>1.100,00 €</td>
+                        </tr>
+                        <tr>
+                            <th>8</th>
+                            <td>Móvil para sordos</td>
+                            <td>400,00 €</td>
+                        </tr>
+                        <tr>
+                            <th>9</th>
+                            <td>Juego de ajedrez</td>
+                            <td>20,00 €</td>
+                        </tr>
+                        <tr>
+                            <th>10</th>
+                            <td>Pianola</td>
+                            <td>1.200,00 €</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="multimedia">
+                <h3>Multimedia</h3>
+
+                <img src="https://picsum.photos/300/200" alt="">
+                <video src="https://www.w3schools.com/html/mov_bbb.mp4" controls></video>
+            </section>
+
+            <section id="formularios">
+                <h3>Formularios</h3>
+
+                <form action="">
+                    <fieldset>
+                        <legend>Datos personales</legend>
+
+                        <div>
+                            <label for="nombre">Nombre</label>
+                            <input type="text" name="nombre" id="nombre">
+                        </div>
+
+                        <div>
+                            <label for="apellidos">Apellidos</label>
+                            <input type="text" name="apellidos" id="apellidos">
+                        </div>
+
+                        <div>
+                            <button>Guardar</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
+        </article>
+    </main>
+    <aside>
+        <p>Anuncios</p>
+    </aside>
+
+    <footer>
+        <p>&copy;2024 Javier Lete</p>
+    </footer>
+</body>
+
+</html>

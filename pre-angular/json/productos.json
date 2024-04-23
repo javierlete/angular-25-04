@@ -1,0 +1,14 @@
+[
+    { "id": 1, "nombre": "Computadora portatil de gama alta", "precio": 1200 },
+    { "id": 2, "nombre": "Computadora de escritorio de gama alta", "precio": 1800 },
+    { "id": 3, "nombre": "Tablet Android de gama media", "precio": 850 },
+    { "id": 4, "nombre": "Smartphone de gama alta", "precio": 800 },
+    { "id": 5, "nombre": "Smartphone de gama media", "precio": 650 },
+    { "id": 6, "nombre": "Smartphone de gama baja", "precio": 500 },
+    { "id": 7, "nombre": "Videojuego de consola de gama alta", "precio": 200 },
+    { "id": 8, "nombre": "Videojuego para consola portatil", "precio": 150 },
+    { "id": 9, "nombre": "Videojuego para PC", "precio": 120 },
+    { "id": 10, "nombre": "Libro de ciencia", "precio": 80 },
+    { "id": 11, "nombre": "Libro de literatura", "precio": 60 },
+    { "id": 12, "nombre": "Libro de historia", "precio": 50 }
+]
