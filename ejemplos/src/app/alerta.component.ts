@@ -2,7 +2,7 @@ import { Component } from "@angular/core";
 
 @Component({
     selector: 'alerta',
-    template: '<div>Alerta</div>',
+    template: '<div>{{mensaje}}</div>',
     styles: `div { 
         text-align: center; 
         background-color: red;
@@ -15,4 +15,6 @@ import { Component } from "@angular/core";
     }`,
     standalone: true,
 })
-export class AlertaComponent {}
+export class AlertaComponent {
+    mensaje = 'Alerta de prueba';
+}
