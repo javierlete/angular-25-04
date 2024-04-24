@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 
 @Component({
     selector: 'alerta',
@@ -16,5 +16,5 @@ import { Component } from "@angular/core";
     standalone: true,
 })
 export class AlertaComponent {
-    mensaje = 'Alerta de prueba';
+    @Input() mensaje = 'Alerta de prueba';
 }
