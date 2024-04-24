@@ -4,11 +4,12 @@ import { AlertaComponent } from './alerta.component';
 import { CabeceraComponent } from './cabecera.component';
 import { MenuComponent } from './menu.component';
 import { PieComponent } from './pie.component';
+import { PrincipalComponent } from './principal.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, AlertaComponent, CabeceraComponent, MenuComponent, PieComponent],
+  imports: [RouterOutlet, AlertaComponent, CabeceraComponent, MenuComponent, PrincipalComponent, PieComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
