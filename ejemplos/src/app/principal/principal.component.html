@@ -1,1 +1,5 @@
-<p>principal works!</p>
+<form>
+    <input type="text" placeholder="Nombre" #nombrePlantilla>
+    <button type="button" (click)="saludar(nombrePlantilla.value)">Saludo</button>
+    <span>Hola {{nombre}}</span>
+</form>

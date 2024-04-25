@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './principal.component.css'
 })
 export class PrincipalComponent {
+  nombre = '';
+  saludar(nombreRecibido: string) {
+    this.nombre = nombreRecibido;
+  }
 
 }
