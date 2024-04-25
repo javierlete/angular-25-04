@@ -3,8 +3,7 @@
     <button type="button" (click)="saludar(nombrePlantilla.value)">Saludo</button>
     <span>Hola {{nombre}}</span>
 
-    <div>
-        <label for="nombre">Nombre</label>
-        <input id="nombre">
-    </div>
+    <app-label-input id="nombre" etiqueta="Nombre"/>
+    <app-label-input id="apellidos" etiqueta="Apellidos"/>
+    <app-label-input id="fechaNacimiento" etiqueta="Fecha de nacimiento" tipo="date"/>
 </form>

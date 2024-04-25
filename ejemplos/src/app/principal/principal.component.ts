@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { LabelInputComponent } from '../label-input/label-input.component';
 
 @Component({
   selector: 'app-principal',
   standalone: true,
-  imports: [],
+  imports: [LabelInputComponent],
   templateUrl: './principal.component.html',
   styleUrl: './principal.component.css'
 })
