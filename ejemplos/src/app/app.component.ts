@@ -4,7 +4,7 @@ import { AlertaComponent } from './alerta.component';
 import { CabeceraComponent } from './cabecera.component';
 import { MenuComponent } from './menu.component';
 import { PieComponent } from './pie.component';
-import { PrincipalComponent } from './principal.component';
+import { PrincipalComponent } from './principal/principal.component';
 
 @Component({
   selector: 'app-root',
