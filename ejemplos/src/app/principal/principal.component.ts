@@ -13,5 +13,9 @@ export class PrincipalComponent {
   saludar(nombreRecibido: string) {
     this.nombre = nombreRecibido;
   }
+  
+  onNombreCambiado(nombreRecibido: string) {
+    this.nombre = nombreRecibido;
+  }
 
 }
