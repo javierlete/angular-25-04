@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Persona } from '../persona';
 
 @Component({
@@ -20,7 +20,7 @@ import { Persona } from '../persona';
   styleUrl: './persona.component.css'
 })
 export class PersonaComponent {
-  persona: Persona = {
+  @Input() persona: Persona = {
     id: 1,
     nombre: 'Javier',
     apellidos: 'Lete',
