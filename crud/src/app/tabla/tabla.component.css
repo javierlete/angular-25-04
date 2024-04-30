@@ -1,0 +1,38 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead, tfoot {
+    background-color: lightgray;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(222, 222, 222);
+}
+
+td, th {
+    border: 1px solid darkgray;
+    padding: 0.50rem;
+    text-align: left;
+}
+
+th:first-child, td:first-child, th:nth-child(3), td:nth-child(3) {
+    text-align: right;
+}
+
+a {
+    border: 1px solid darkgray;
+    padding: 0.25rem;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 0.5rem;
+
+    margin-right: 0.5rem;
+}
+
+a:hover {
+    background-color: black;
+    color: white;
+}
