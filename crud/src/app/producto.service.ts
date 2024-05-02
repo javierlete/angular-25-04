@@ -5,13 +5,10 @@ import { Producto } from './producto';
   providedIn: 'root'
 })
 export class ProductoService {
-  productos: Producto[] = [
-    { id: 1, nombre: 'Portátil', precio: 1234.12 },
-    { id: 2, nombre: 'Monitor', precio: 123.12 },
-    { id: 3, nombre: 'Ratón', precio: 12.12 },
-  ];
+  url = 'http://127.0.0.1:3000/productos/';
 
-  obtenerProductos(): Promise<Producto[]> {
-    return new Promise(resolve => resolve(this.productos));
+  async obtenerProductos(): Promise<Producto[]> {
+    const respuesta = await fetch(this.url);
+    return await respuesta.json();
   }
 }
