@@ -1,0 +1,30 @@
+div {
+    display: flex;
+    align-items: baseline;
+}
+
+label {
+    width: 5rem;
+}
+
+input {
+    margin: 0.5rem 0;
+    flex-grow: 1;
+}
+
+button {
+    margin-left: 5rem;
+}
+
+input, button {
+    border: 1px solid darkgray;
+    padding: 0.25rem;
+    background-color: white;
+    color: black;
+    border-radius: 0.5rem;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}
