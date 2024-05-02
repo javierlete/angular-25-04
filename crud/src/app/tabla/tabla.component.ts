@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Producto } from '../producto';
 import { CommonModule } from '@angular/common';
+import { ProductoService } from '../producto.service';
 
 @Component({
   selector: 'app-tabla',
@@ -11,9 +12,10 @@ import { CommonModule } from '@angular/common';
   styleUrl: './tabla.component.css'
 })
 export class TablaComponent {
-  productos: Producto[] = [
-    { id: 1, nombre: 'Portátil', precio: 1234.12 },
-    { id: 2, nombre: 'Monitor', precio: 123.12 },
-    { id: 3, nombre: 'Ratón', precio: 12.12 },
-  ];
+  productos: Producto[] = [];
+  servicio = inject(ProductoService);
+
+  constructor() {
+    this.productos = this.servicio.obtenerProductos();
+  }
 }
