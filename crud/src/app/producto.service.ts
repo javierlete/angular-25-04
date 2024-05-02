@@ -12,6 +12,11 @@ export class ProductoService {
     return await respuesta.json();
   }
 
+  async obtenerProductoPorId(id: number): Promise<Producto> {
+    const respuesta = await fetch(this.url + id);
+    return await respuesta.json();
+  }
+
   async borrarProducto(id: number): Promise<any> {
     return await fetch(this.url + id, { method: 'DELETE' });
   }

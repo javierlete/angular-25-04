@@ -1,15 +1,15 @@
-<form>
+<form [formGroup]="form">
     <div>
         <label for="id">Id</label>
-        <input type="text" id="id" placeholder="Id">
+        <input type="text" id="id" placeholder="Id" formControlName="id">
     </div>
     <div>
         <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" placeholder="Nombre">
+        <input type="text" id="nombre" placeholder="Nombre" formControlName="nombre">
     </div>
     <div>
         <label for="precio">Precio</label>
-        <input type="number" step=".01" id="precio" placeholder="Precio">
+        <input type="number" step=".01" id="precio" placeholder="Precio" formControlName="precio">
     </div>
     <div>
         <button routerLink="">Guardar</button>
