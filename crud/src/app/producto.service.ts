@@ -11,7 +11,7 @@ export class ProductoService {
     { id: 3, nombre: 'Ratón', precio: 12.12 },
   ];
 
-  obtenerProductos(): Producto[] {
-    return this.productos;
+  obtenerProductos(): Promise<Producto[]> {
+    return new Promise(resolve => resolve(this.productos));
   }
 }

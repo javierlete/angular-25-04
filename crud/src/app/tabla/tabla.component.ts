@@ -16,6 +16,6 @@ export class TablaComponent {
   servicio = inject(ProductoService);
 
   constructor() {
-    this.productos = this.servicio.obtenerProductos();
+    this.servicio.obtenerProductos().then(productosRecibidos => this.productos = productosRecibidos);
   }
 }
