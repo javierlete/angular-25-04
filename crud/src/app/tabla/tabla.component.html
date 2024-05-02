@@ -14,7 +14,7 @@
             <td>{{p.precio}}€</td>
             <td>
                 <a routerLink="form/{{p.id}}">Editar</a>
-                <a href="#">Borrar</a>
+                <a (click)="borrar(p.id)">Borrar</a>
             </td>
         </tr>
     </tbody>

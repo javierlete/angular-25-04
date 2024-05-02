@@ -16,6 +16,14 @@ export class TablaComponent {
   servicio = inject(ProductoService);
 
   constructor() {
+    this.cargarProductos();
+  }
+
+  private cargarProductos() {
     this.servicio.obtenerProductos().then(productosRecibidos => this.productos = productosRecibidos);
+  }
+
+  borrar(id: number) {
+    this.servicio.borrarProducto(id).then(() => this.cargarProductos());
   }
 }
