@@ -8,30 +8,12 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <th>1</th>
-            <td>Portátil</td>
-            <td>1234,12€</td>
+        <tr *ngFor="let p of productos">
+            <th>{{p.id}}</th>
+            <td>{{p.nombre}}</td>
+            <td>{{p.precio}}€</td>
             <td>
-                <a routerLink="form/1">Editar</a>
-                <a href="#">Borrar</a>
-            </td>
-        </tr>
-        <tr>
-            <th>2</th>
-            <td>Portátil</td>
-            <td>1234,12€</td>
-            <td>
-                <a routerLink="form/2">Editar</a>
-                <a href="#">Borrar</a>
-            </td>
-        </tr>
-        <tr>
-            <th>3</th>
-            <td>Portátil</td>
-            <td>1234,12€</td>
-            <td>
-                <a routerLink="form/3">Editar</a>
+                <a routerLink="form/{{p.id}}">Editar</a>
                 <a href="#">Borrar</a>
             </td>
         </tr>
