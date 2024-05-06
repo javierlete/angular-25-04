@@ -1,9 +1,9 @@
-:host {
+.contenedor {
     display: flex;
     align-items: flex-start;
 }
 
-div, figure {
+.derecho, .izquierdo {
     width: 50%;
 }
 
@@ -17,7 +17,7 @@ img {
     padding-left: 0.5rem;
 }
 
-figure {
+.izquierdo {
     position: relative;
 }
 
