@@ -1,0 +1,29 @@
+<form [formGroup]="form">
+    <div>
+        <input type="number" placeholder="Id" formControlName="id">
+    </div>
+    <div>
+        <input type="url" placeholder="URL" formControlName="url">
+    </div>
+    <div>
+        <input type="url" placeholder="URL foto" formControlName="urlFoto">
+    </div>
+    <div>
+        <input type="text" placeholder="Título" formControlName="titulo">
+    </div>
+    <div>
+        <textarea placeholder="Descripción" formControlName="descripcion"></textarea>
+    </div>
+    <div>
+        <input type="number" placeholder="Horas" formControlName="horas">
+    </div>
+    <div>
+        <input type="number" placeholder="Minutos" formControlName="minutos">
+    </div>
+    <div>
+        <input type="number" placeholder="Segundos" formControlName="segundos">
+    </div>
+    <div>
+        <button (click)="guardar()">Guardar</button>
+    </div>
+</form>
