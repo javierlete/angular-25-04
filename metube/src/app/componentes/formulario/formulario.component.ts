@@ -1,8 +1,8 @@
 import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { VIDEOS } from '../../mocks/videos';
 import { Video } from '../../tipos/video';
 import { Location } from '@angular/common';
+import { VideosService } from '../../servicios/videos.service';
 
 @Component({
   selector: 'app-formulario',
@@ -12,6 +12,7 @@ import { Location } from '@angular/common';
   styleUrl: './formulario.component.css'
 })
 export class FormularioComponent {
+  servicio = inject(VideosService);
   location = inject(Location);
   form = new FormGroup({
     id: new FormControl(),
@@ -24,9 +25,9 @@ export class FormularioComponent {
     segundos: new FormControl(),
   });
 
-  guardar() {
+  async guardar() {
     console.log(this.form.value);
-    VIDEOS.push(this.form.value as Video);
+    await this.servicio.alta(this.form.value as Video);
     this.location.back();
   }
 }
