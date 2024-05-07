@@ -1,23 +1,31 @@
 import { Injectable } from '@angular/core';
 import { Video } from '../tipos/video';
-import { VIDEOS } from '../mocks/videos';
 
 @Injectable({
   providedIn: 'root'
 })
 export class VideosService {
+  url = 'http://127.0.0.1:3000/videos/';
 
-  obtenerTodos(): Promise<Video[]> {
-    return new Promise(resolve => resolve(VIDEOS));
+  async obtenerTodos(): Promise<Video[]> {
+    const respuesta = await fetch(this.url);
+    return await respuesta.json();
   }
 
-  obtenerPorId(id: number): Promise<Video> {
-    return new Promise(resolve => resolve(VIDEOS.find(v => v.id === id)!));
+  async obtenerPorId(id: number): Promise<Video> {
+    const respuesta = await fetch(this.url + id);
+    return await respuesta.json();
   }
 
-  alta(video: Video): Promise<Video> {
-    video.id = VIDEOS.length ? Math.max(...VIDEOS.map(v => v.id)) + 1: 1;
-    VIDEOS.push(video);
-    return new Promise(resolve => resolve(video));
+  async alta(video: Video): Promise<Video> {
+    const respuesta = await fetch(this.url, {
+      method: 'POST',
+      body: JSON.stringify(video),
+      headers: {
+        'Content-type': 'application/json'
+      }
+    });
+
+    return await respuesta.json();
   }
 }
