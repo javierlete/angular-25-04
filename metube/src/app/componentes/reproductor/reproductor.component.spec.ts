@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ReproductorComponent } from './reproductor.component';
+import { provideRouter } from '@angular/router';
 
 describe('ReproductorComponent', () => {
   let component: ReproductorComponent;
@@ -8,7 +9,8 @@ describe('ReproductorComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ReproductorComponent]
+      imports: [ReproductorComponent],
+      providers: [provideRouter([])],
     })
     .compileComponents();
     

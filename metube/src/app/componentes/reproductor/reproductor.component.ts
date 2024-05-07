@@ -1,22 +1,20 @@
-import { Component, Sanitizer, inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Video } from '../../tipos/video';
 import { CommonModule } from '@angular/common';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { Component, inject } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { SeguroPipe } from '../../pipes/seguro.pipe';
 import { VideosService } from '../../servicios/videos.service';
+import { Video } from '../../tipos/video';
 
 @Component({
   selector: 'app-reproductor',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, SeguroPipe],
   templateUrl: './reproductor.component.html',
   styleUrl: './reproductor.component.css'
 })
 export class ReproductorComponent {
   id!: number;
-  video!: Video;
-  urlVideo!: SafeResourceUrl;
-  sanitizer = inject(DomSanitizer);
+  video: Video = {} as Video;
   servicio = inject(VideosService);
 
   ruta = inject(ActivatedRoute);
@@ -25,11 +23,6 @@ export class ReproductorComponent {
     this.id = Number(this.ruta.snapshot.params['id']);
 
     this.servicio.obtenerPorId(this.id).then(
-      videoRecibido => {
-        this.video = videoRecibido;
-        this.urlVideo = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' + this.video.url);
-      }
-    );
-
+      videoRecibido => this.video = videoRecibido);
   }
 }
