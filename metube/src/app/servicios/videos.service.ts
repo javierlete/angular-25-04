@@ -28,4 +28,16 @@ export class VideosService {
 
     return await respuesta.json();
   }
+  
+  async valorar(id: number, valoracion: number): Promise<Video> {
+    const respuesta = await fetch(this.url + id, {
+      method: 'PATCH',
+      body: JSON.stringify({ id, valoracion }),
+      headers: {
+        'Content-type': 'application/json'
+      }
+    });
+
+    return await respuesta.json();
+  }
 }
