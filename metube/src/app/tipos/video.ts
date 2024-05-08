@@ -7,4 +7,5 @@ export interface Video {
     horas: number;
     minutos: number;
     segundos: number;
+    valoracion?: number;
 }
