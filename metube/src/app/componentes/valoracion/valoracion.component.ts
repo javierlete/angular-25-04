@@ -12,6 +12,9 @@ export class ValoracionComponent {
   @Output() valoracionChange = new EventEmitter<number>();
 
   onCambio(valoracionEnElCuadro: number) {
-    this.valoracionChange.emit(valoracionEnElCuadro);
+    if(valoracionEnElCuadro >= 0 && valoracionEnElCuadro <= 10) {
+      this.valoracionChange.emit(valoracionEnElCuadro);
+      this.valoracion = valoracionEnElCuadro;
+    }
   }
 }
